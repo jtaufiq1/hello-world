@@ -1,6 +1,6 @@
 Web Dev Repository
 
- Contains webpages and we script in
+ Contains webpages and web script in
  html and css
  javascript
  php
