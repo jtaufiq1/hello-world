@@ -1,6 +1,7 @@
-# hello-world
-Brief intro to github
+Web Dev Repository
 
-My Name is Taufiq.
-I love to play with linux bot 
-In other to get an insight.
+ Contains webpages and we script in
+ html and css
+ javascript
+ php
+	 ...
