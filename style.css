@@ -8,27 +8,37 @@
             font-weight: bold;}
 
          @media screen and (max-width: 800px){
-
+			*{width: 100%; margin: 0px;}
          	body { background-color: white; color: #421F1F;}
-         	.nav-list { background-color: white; display: grid;}
-         	
+         	div {width: 100%;}
+         	h1, h2, h3, h4, h5, h5 {
+         		 width: 100%;}
+         	nav {width: 60%;}
+         	img {max-width: 30%;}
          }
 
         h1, h2, h3, h4, h5, h6 {
             text-transform: uppercase;
             text-align: center;
+            width: 55vw;
+            margin: auto;
             background-color: black;
             color: lime;
             border-radius: 0.6rem 0.6rem 0 0;}
+          
+        nav {width: 45%;
+          	margin: 0 auto;}
+        nav a { text-decoration: overline underline; }
         
         img {max-height: 100%;
+        	width: 30px;
+        	margin-left: -9.3px;
             border-radius: 50%;}
 
        a {color: #2FA1A1;}
 
         .nav-list {
             margin: auto;
-
             color: navy;}
 
         li {text-transform: uppercase;
