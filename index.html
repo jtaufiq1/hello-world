@@ -1,235 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>FAWZY</title>
-    
-    <meta content="utf-8" name="charset">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <link href="#" rel="Stylesheet" type="text/css"/>
-    
-    <style>
-        body {
-            
-            font-size: 1.4em;
-            background-color: grey;
-            
-            margin: 10px auto;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GH-ITNERD</title>
+    <link rel="stylesheet" href="style.css">
 
-        @keyframes heading_1 {
-	            from{background-color:black;
-	            transform: rotate(-15deg);
-	            font-family: cursive;}
-	            to{background-color:skyblue;
-	        	font-family: sans-serif;
-	        	opacity: 0.5;
-                }
-             }
-
-        heading, h1 {
-            text-transform: uppercase;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align:center;
-            color: rgba(194, 228, 1, 0.62);
-            margin: 0 auto;
-            width: 80%;
-            border-radius: 0.8em;
-            background-color: #0E0E36;
-}
-        marquee {
-            font-variant: small-caps;
-            color: lime;
-        }
-
-        .txt {
-            border: 2px solid brown;
-        }
-
-        span {
-            text-decoration: bold;
-            font-variant: small-caps;
-            color: goldenrod;
-        }
-        #main{
-            float: left;
-            margin-bottom: 10px;
-        }
-        
-        fieldset {
-            border: 4px double greenyellow;
-            border-radius: 0.6em;
-        }
-        
-        legend {
-            text-transform: uppercase;
-            font-family: Arial, Helvetica, sans-serif;
-            color: lime;
-
-        }
-       
-        button {
-            border:2px solid grey;
-            background-color:#D7D5E0;
-            font-variant: small-caps;
-            border: 1px solid goldenrod;
-            border-radius: 0.4;
-        }
-        #bt0 {
-        	background-color: black;
-        	color: lime;
-        }
-        #p{
-            float: left;
-            margin:0 0 0 auto;
-            color: navy;
-            display: none;
-        }
-        #n{
-            float:right;
-            margin:auto 0 0 0;
-            color: gold;
-            display: none;
-        }
-        
-        hr {
-            border: 1px dashed cyan;
-        }
-        
-        footer {
-            margin: 20px auto;
-            border: 5px solid aliceblue;
-            clear: both;
-            background-color: black;
-            color: limegreen;
-            text-align: center;
-            font-variant: small-caps;
-            border-radius: 1.4em;
-            width: 50%;
-        }
-    </style>
 </head>
-<body>
-    <heading>
-        <h1>congrats fawzy</h1>
-        <marquee>congratulations - Fawzy, best days ahead for you In Sha Allah</marquee>
-    </heading>
-  
-    <main>
-    <fieldset>
-        <legend id="leg">Gh Says:</legend>
-        <button id="bt0" onclick="i = 0, show(), today()">Read</button>
-    
-        <div class="text" id="dsp"></div>
-    </fieldset>
-    </main> 
-    
-<div id="p" onclick="show();">
-<button>Prev</button>
-</div>
-
-<div id="n" onclick="show();">
-<button>Next</button>
-</div>
-
-<hr>
-
-<footer>courtesy of Gh
-    <p id="tday"></p>
-</footer>
-
-<script>
-alert("MSG: Gh Congratulates You");
-var bt0 = document.getElementById('bt0');
-var pr = document.querySelector('#p');
-var ne = document.querySelector('#n');
-var dsp = document.querySelector('#dsp');
-var i = 1;
-var leg = document.getElementById('leg');
-var tday = document.getElementById('tday');
-
-// Quotes to iterates over  
-var qt_010 = '<p>A successful marriage requires falling\
-       in love many times, always with the same person.</p>';
-
-var qt_011 = '<p><span>Love is friendship</span> that has caught fire. It settles for less<br><span>perfection</span> and needs a lot of <span>patience, understanding,<br> mutual confidence, sharing and forgiving</span>.<br></p>';
-
-var qt_012 = '<p><q>A happy and successful marriage is the\
- <span><u><b>union</b></u></span> of two good forgivers.</q></p>';
-
-var qt_013 = '<p><q>The greatest marriages are built on teamwork.<br>\
-                A mutual respect, a healthy dose of <span>admiration</span>,\
-                <br>and a never-ending portion of love and grace.</q></p>';
-
-var qt_014 = '<p><span>The first to apologize is the bravest.<br>\
-                The first to forgive is the strongest.\
-                <br>The first to forget is the happiest</span>.</p>';
-
-var qt_015 = '<p>And in the end, the <span>love you take</span>\
- is equal to the <span>love you make.</span></p>';
- 
-var gh = '<p><b>Best wishes from Gh to his<br> <span>Dearest</span>\
-                 Sister for her <span>glorious</span> transition</b></p>';
-                  dsp.innegrHTML ='gh';
-                  
-
-// Function to switch quotes
-function today(){
-    const mdate = "Feb-23/24-2018";
-
- var monthOfYear = ['January','February',
-	'March', 'April','May','June', 'July', 'august',
-	'September', 'October', 'November','December'
-];
-var d = new Date();
-    var m = d.getMonth();
-    var y = d.getFullYear();
-    tday.innerHTML = monthOfYear[m] + ' ' + y;
-}
-function show(){
-
-  bt0.style.display = 'none';
-  pr.style.display = 'block';
-  ne.style.display = 'block';
-  dsp.style.color = 'navy';
-  dsp.style.backgroundColor = 'ghostwhite';
-    leg.style.textTransform = 'uppercase';
-
-        switch(i){
-            case 1:
-                leg.innerHTML = 'happy marriage';
-                dsp.innerHTML = qt_010;
-                i += 1;
-                break;
-            case 2:
-                dsp.innerHTML = qt_011;
-                i += 1;
-                break;
-            case 3:
-                dsp.innerHTML = qt_012;
-                i += 1;
-                break;
-            case 4:
-                dsp.innerHTML = qt_013;
-                i += 1;
-                break;
-            case 5:
-                dsp.innerHTML = qt_014;
-                i += 1;
-                break;
-            case 6:
-                dsp.innerHTML = qt_015;
-                i += 1;
-                break;
-            default:
-                bt0.style.display ='none';
-                 leg.style.animation = 'heading_1 5s linear 2s infinite reverse';
-                 dsp.style.color = 'navy';
-                 leg.innerHTML = 'Taufiq Gh';
-                 dsp.innerHTML = gh;
-                 i = 1;
-        }
-}
-</script>
-
+<body width="90%">
+    <!--div  class="bar"-->
+        <a href="#">Gh-ITNERD</a>
+        <div id="right">
+            <a href="#"><img src="h2.png" width="40px"></a>
+            
+        </div>
+        <h1>Welcome</h1>
+        <nav class="nav-list">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <!--li><a href="#">Content</a></li-->
+                    <li><a href="projects/projects.html">Project</a></li>
+                    <li><a href="today.html">today</a></li>
+                    <li><a href="">Contact</a></li>
+                    <!--li><a href="">About Us</a></li-->
+                    <!--li><a href="">Misc</a></li-->
+                </ul>
+        </nav>
+    <marquee><b>Created by <span>Taufiq Gh</span></b></marquee>
 </body>
 </html>

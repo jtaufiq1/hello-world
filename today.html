@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaScript and HTML</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link href="favico.ico" rel="Shortcut Icon" />
+
+  <style>
+	body {
+		width: 85%;
+		margin: 0 auto;
+		padding: 3px;
+	}
+  @keyframes heading_1 {
+
+	from{background-color:black;
+	transform: rotate(-10deg);
+	font-family: cursive;}
+	to{background-color:skyblue;
+		font-family: sans-serif;
+		opacity: 0.7;
+	}
+ }
+ 
+  h1 {
+	text-align: center;
+	width: 23%;
+	text-transform: uppercase;
+	background-color:grey;
+	color: white;
+	margin: 0 auto;
+	padding: 0px;
+	animation: heading_1 5s linear 2s infinite reverse;
+	/*
+	animation-name: heading_1;
+	animation duration: 15s;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate reverse;
+	*/
+	}
+	
+	h2 {
+		text-align: center;
+		font-variant: small-caps;
+		margin: 0 auto;
+		color: skyblue;
+	}
+	button {
+		font-variant: small-caps;
+		background-color: black;
+	}
+	button.left {
+			color: gold;
+	}
+	button.right {
+		color: red;
+	}
+	p {
+		color: black;
+	} 
+	
+	ul li {
+		font-variant: small-caps;
+		list-style: none;
+	}
+  </style>
+  
+  <script>
+ /*   function changeTitle() {
+      var title = document.querySelector("#mainTitle");
+      title.innerHTML += "<br>This new <u>title</u> has been changed from JavaScript!";
+    } */
+
+	// Shows date and time
+	function Now(){
+		var parag = document.getElementById('parag');
+		var heading_2 = document.getElementById('heading_2');
+		parag.innerHTML=Date();
+		heading_2.innerHTML="Current State";
+		parag.style.display="block";	
+		heading_2.style.fontVariant="small-caps";
+		heading_2.style.textAlign="center";
+	}
+	
+	// Hide Sliding text
+	function Hide(){
+		heading_2.innerHTML="Initial State";
+		parag.style.display="none"
+	}
+
+  </script>
+</head>
+  <body>
+    <h1>taufiq gh</h1> 
+	<h2 id="heading_2">initial state</h2>
+	
+	<marquee id="parag" direction="left"></marquee>
+    
+	<div style="float: left; margin:;"><button onclick="Now();" class="left">DateTime</button></div>
+	<div style="float: right; margin: 0 auto"><button onclick="Hide();" class="right">Revert</button></div><hr/>
+	
+	<div style="height: 200px; width: 150px; border: 2px dotted brown; position: fixed; margin: 10px auto;">
+	 <ul>
+			<li><a href="index.html" alt="home_page">Home</a></li>
+			<li><a href="blogprofile.html" alt="blog_page">Profile</a></li>
+			<li><a href="bistro/index.html" alt="black_goose_bistro">goose bistro</a></li>
+			<li><a href="field.html" alt="fieldset_practice">fieldset</a></li>
+			<li><a href="tables/index.html" alt="time_table">time table</a></li>
+			<li><a href="test_page.html" alt="test page">test page</a></li>
+			<li><a href="#" alt="contact page">contact us </a></li>
+			<li><a href="intro.html" alt="datetime">today</a></li>
+		</ul>
+	</div>
+  </body>
+</html>

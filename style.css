@@ -1,0 +1,35 @@
+
+        
+        *{  font-size: 4vh;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            list-style: none;
+            background-color: navajowhite;
+            box-sizing: border-box;
+            font-weight: bold;}
+
+        h1, h2, h3, h4, h5, h6 {
+            text-transform: uppercase;
+            text-align: center;
+            background-color: black;
+            color: lime;
+            border-radius: 0.6rem 0.6rem 0 0;}
+        
+        img {max-height: 30px;
+            border-radius: 50%;
+            display: inline;}
+
+       a {color: #2FA1A1;}
+
+        .nav-list {
+            margin: auto;
+            width: 40%;
+            color: navy;}
+
+        li {text-transform: uppercase;
+            background-color: #421F1F;
+            display: inline-block;}
+
+        span {background-color: #332514;
+            color:#2FA1A1;
+            font-family: cursive;}

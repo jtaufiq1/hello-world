@@ -1,0 +1,89 @@
+body {
+	
+	border: 1px dashed aliceblue;
+	width:95%;
+	margin: 0 auto;
+	overflow: display;
+}
+
+#content {
+	border:5px;
+	margin: 0 auto;
+	border-radius: 1em;
+	background-color: skyblue;
+}
+
+#header {
+	background-color: #fff111;
+	border-radius: 0.5em;
+} 
+
+h1, h2 {
+	text-transform: uppercase;
+	background-color: navy;
+	color: #fff111;
+	font-size: 25px;
+	text-align: center;
+	font-family: helvetica, sans-serif, "times new roman";
+}
+
+#nav{
+	
+	text-align: center;
+	text-transform: uppercase;
+}
+
+	a {
+		text-decoration: none;
+	}
+	
+	a .selected {
+		text-decoration: bolder;
+		color: blue;
+	}
+	
+	ul li {
+		
+		list-style: none;
+	}
+	
+#profile {
+	float: right;
+	background-color: skyblue;
+	border: 5px solid red;
+	border-radius: 1em;
+}
+
+#form {
+	background-color: skyblue;
+	color: #AB054;
+	border: 2px dotted #EE22FD;
+	margin: 0 auto;
+	font: Arial;
+	padding:3px;
+	border-radius: 1em;
+}
+
+textarea {
+
+}
+label {
+	font-size: 22px ;
+	font-variant: small-caps;
+}
+button {
+	color: navy;
+	font-variant: small-caps;
+	border: 2px solid #fff;
+	border-radius: 1em;
+	text-align: center;
+	background-color:skyblue;
+}
+
+.footer{
+	clear: both;
+	color: #232323;
+	background-color: #efefe;
+	text-align: right;
+}
+
