@@ -80,7 +80,10 @@
 		var heading_2 = document.getElementById('heading_2');
 		parag.innerHTML=Date();
 		heading_2.innerHTML="Current State";
-		parag.style.display="block";	
+		var paragStyle = parag.style;
+		paragStyle.display="block";	
+
+		var heading2Style = heading_2.style;
 		heading_2.style.fontVariant="small-caps";
 		heading_2.style.textAlign="center";
 	}
@@ -99,7 +102,7 @@
 	
 	<marquee id="parag" direction="left"></marquee>
     
-	<div style="float: left; margin:;"><button onclick="Now();" class="left">DateTime</button></div>
+	<div style="float: left;"><button onclick="Now();" class="left">DateTime</button></div>
 	<div style="float: right; margin: 0 auto"><button onclick="Hide();" class="right">Revert</button></div><hr/>
 	
 	<div style="height: 200px; width: 150px; border: 2px dotted brown; position: fixed; margin: 10px auto;">
