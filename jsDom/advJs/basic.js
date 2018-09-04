@@ -29,7 +29,7 @@ console.log("My Object rec is: " + rect);
 function computeArea(radius) {
     return radius * radius * Math.PI;
 }
-printString(computeArea(4));
+// printString(computeArea(4));
 
 // Print String 
 // @param {string} Input String
@@ -65,3 +65,5 @@ function half(x) {
 function isEven(n) {
     (n % 2 == 0) ? console.log('True'): console.log('False');
 }
+
+/* OBJECTS */
