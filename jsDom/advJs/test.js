@@ -1,4 +1,4 @@
-var myString = prompt("Enter String");
+//var myString = prompt("Enter String");
 
 function sPrint(str) {
     for(let i in arguments) {
@@ -16,4 +16,4 @@ function sTest(str_) {
     }
 }
 
-sTest(myString);
+// sTest(myString);
