@@ -1,33 +1,19 @@
-div {
-    background-color: grey;
-    width: 300px;
-    margin: auto;
-    height: 300px;
-    border: 1px;
-}
-* {    
-    background-color: rgb(0,0,0,0.1);
-}
 
-.heading {
-    text-transform: uppercase;
-    text-align: center;
-    color: coral;
-    background-color: azure;
+body {
+    background-color: black;
 }
-/* Pseudoclass and PseudoElements */
-p::before {
-    content: '#';
-    color: red;
+form, .outputField {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 9px;
+    width: 300px;
 }
-p::after { 
-    content: '?';
-    color: aqua;
+form, label, input, .outputField {
+    margin: 10px auto;
+    padding: 5px;
 }
-p::first-line {
-    color: gold;
-}
-p::selection {
-    content: 'This is selected text';
+input[type="submit"] {    
+    background-color: black;
+    color: cornsilk;
     font-weight: bolder;
 }

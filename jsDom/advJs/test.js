@@ -1,4 +1,5 @@
 //var myString = prompt("Enter String");
+var inputField = document.getElementById('#inputField');
 
 function sPrint(str) {
     for(let i in arguments) {
@@ -15,5 +16,5 @@ function sTest(str_) {
     sPrint("Thanks for entering '" + str_ + "!' "); 
     }
 }
-
+inputField.value = "this";
 // sTest(myString);
