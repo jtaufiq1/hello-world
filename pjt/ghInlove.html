@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dearest One</title>
+    
+    <meta content="utf-8" name="charset">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link href="#" rel="Stylesheet" type="text/css"/>
+    
+    <style>
+        body {
+            width: 890px;
+            margin: 5px auto;
+            padding: 12px auto;
+        }
+        
+        @keyframes anim {
+            from { background-color:black;
+            transform: rotate(-15deg);
+            font-family: cursive;
+            }
+            to { background-color:skyblue;
+            font-family: sans-serif;
+            opacity: 0.5;
+            }
+        }
+        heading {
+            text-align: center;
+            font-weight: bolder;
+            background-color: cornsilk;
+            color: greenyellow;
+            animation: anim 2s ease-in infinite reverse;
+        }
+        marquee {
+            font-variant: small-caps;
+            color: lime;
+        }
+        fieldset {
+            border: 4px double greenyellow;
+            border-radius: 0.6em;
+        }
+        legend {
+            text-transform: small-caps;
+            font-family: Arial, Helvetica, sans-serif;
+            color: goldenrod;
+        }
+        button {
+            
+            border: 2px solid grey;
+            background-color: whitesmoke;
+            font-variant: small-caps;
+            border-radius: 0.6em;
+        }
+        .hidden {
+            display: none;
+        }
+        #read {
+            display: block;
+        }
+        #accept {
+        	color: lime;
+        }
+        #reject {
+            color: red;
+        }
+        #notDecided {
+            color: yellowgreen;
+        }
+        hr {
+            border: 2px double crimson;
+            margin: 10px auto;
+        }
+        
+        footer {
+            margin: 20px auto;
+            border: 2px dotted aliceblue;
+            clear: both;
+            
+            color: limegreen;
+            text-align: center;
+            font-variant: small-caps;
+            border-radius: 2.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Dear One</h1>
+    <main>
+    <fieldset>
+        <legend >gh_al!3n:</legend>
+        <button id="read" onclick="show()">Read</button>
+        <div id="message"></div>
+    </fieldset>
+    <div class="hidden">
+        <button id="accept" onclick="accept()">Accept</button>
+        <button id="reject" onclick="reject()">Reject</button>
+        <button id="notDecided" onclick="notDecided()">Later</button>
+    </div>
+    <hr>
+    </main>
+    <footer>
+        <p id="tday"></p>
+    </footer>
+    <script>
+        // Today's Date and Time
+        function today(){
+            
+            var tday = document.querySelector('#tday');
+            let monthOfYear = ['January','February',
+                'March', 'April','May','June', 'July', 'august',
+                'September', 'October', 'November','December'];
+
+            let date = new Date();
+            let d = date.getDate();
+            let m = date.getMonth();
+            let y = date.getFullYear();
+            tday.style.display = 'block';
+            tday.style.color = 'green';
+            tday.style.backgroundColor = 'white';
+            tday.innerHTML = d +'/'+ monthOfYear[m] + '/' + y;
+        }
+
+        // Show 
+        function show() {
+            alert("DEAR ONE");
+            let replyContainer = document.querySelector('.hidden');
+            let message = document.querySelector('#message');
+            let accept = document.querySelector('#accept');
+            let reject = document.querySelector('#reject');
+            let notDecided = document.queryselector('#notDecided');
+            let read = document.querySelector('#read');
+            
+            read.style.display = 'none';
+            replyContainer.style.display = 'block';
+            message.style.display = 'block';
+            // accept.style.display = 'block';
+            // reject.style.display = 'block';
+            // notDecided.style.display = 'block';
+        }
+
+        // Relay Message
+        function message() {
+
+        }
+        // Get Answer
+        function reply() {
+
+        }
+        // Accepted
+        function accept() {
+
+        }
+        // Rejected
+        function reject() {
+
+        }
+        // Not Decided
+        function notDecided() {
+
+        }
+    </script>
+</body>
+</html>
