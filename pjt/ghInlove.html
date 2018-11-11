@@ -8,77 +8,108 @@
     <link href="#" rel="Stylesheet" type="text/css"/>
     
     <style>
+        * {
+            font-variant: small-caps;
+            box-sizing: border-box;
+        }
         body {
             width: 890px;
             margin: 5px auto;
             padding: 12px auto;
+            background-image: url("heart.jpg");
+            background-clip: content-box;
         }
         
         @keyframes anim {
-            from { background-color:black;
-            transform: rotate(-15deg);
+            from { background-color:gold;
+            transform: rotate(-10deg);
             font-family: cursive;
+            
+            text-align: left;
+            }
+            50% {
+                color: crimson;
+                background-color: aliceblue;
+                text-align: center;
+                transform: rotate(0deg);
             }
             to { background-color:skyblue;
             font-family: sans-serif;
             opacity: 0.5;
+            
+            text-align: right;
+            transform: rotate(10deg);
             }
         }
-        heading {
+        #heading {
             text-align: center;
+            width: 20%;
+            transform: skew(30deg);
+            margin: 8px auto;
             font-weight: bolder;
             background-color: cornsilk;
-            color: greenyellow;
-            animation: anim 2s ease-in infinite reverse;
+            animation: anim 3s ease-in-out infinite reverse;
         }
         marquee {
-            font-variant: small-caps;
             color: lime;
         }
         fieldset {
-            border: 4px double greenyellow;
+            border: 5px double greenyellow;
             border-radius: 0.6em;
         }
         legend {
-            text-transform: small-caps;
             font-family: Arial, Helvetica, sans-serif;
             color: goldenrod;
         }
         button {
-            
-            border: 2px solid grey;
+            border: 2px solid rgb(180, 172, 172);
             background-color: whitesmoke;
-            font-variant: small-caps;
             border-radius: 0.6em;
+            font-weight: bolder;
         }
-        .hidden {
+        .btn {
             display: none;
+            /*visibility: hidden;*/
         }
-        #read {
+        .messageContainer {
+            width: 67%; height: 180px;
+            background-color: red;
+            border-radius: 1.3em 3px 1.3em 3px;
+            padding: 5px;
+            margin: 10px auto;
+        }
+        
+        #message {
+            color: blue;
+            font-style: italic;
+        }
+        #replyContainer {
+            margin: 5px auto;
+            padding: 10px;
+        
+        }
+        .read {
             display: block;
         }
-        #accept {
-        	color: lime;
+        .accept {
+        	color: rgb(6, 82, 6);
         }
-        #reject {
+        .reject {
             color: red;
         }
-        #notDecided {
-            color: yellowgreen;
+        .notDecided {
+            color: goldenrod;
         }
         hr {
             border: 2px double crimson;
             margin: 10px auto;
         }
-        
         footer {
             margin: 20px auto;
-            border: 2px dotted aliceblue;
+            border: 2px solid rgb(58, 132, 196);
             clear: both;
-            
             color: limegreen;
             text-align: center;
-            font-variant: small-caps;
             border-radius: 2.5em;
         }
     </style>
@@ -88,13 +119,15 @@
     <main>
     <fieldset>
         <legend >gh_al!3n:</legend>
-        <button id="read" onclick="show()">Read</button>
-        <div id="message"></div>
+        <button class="btn, read" onclick="show(); today();">Read</button>
+        <div class="messageContainer">
+            <p id="message">This is a message</p>
+        </div>
     </fieldset>
-    <div class="hidden">
-        <button id="accept" onclick="accept()">Accept</button>
-        <button id="reject" onclick="reject()">Reject</button>
-        <button id="notDecided" onclick="notDecided()">Later</button>
+    <div id="replyContainer">
+        <button class="btn, accept" onclick="accept()">Accept</button>
+        <button class="btn, reject" onclick="reject()">Reject</button>
+        <button class="btn, notDecided" onclick="notDecided()">Engaged</button>
     </div>
     <hr>
     </main>
@@ -104,7 +137,6 @@
     <script>
         // Today's Date and Time
         function today(){
-            
             var tday = document.querySelector('#tday');
             let monthOfYear = ['January','February',
                 'March', 'April','May','June', 'July', 'august',
@@ -114,28 +146,21 @@
             let d = date.getDate();
             let m = date.getMonth();
             let y = date.getFullYear();
-            tday.style.display = 'block';
-            tday.style.color = 'green';
-            tday.style.backgroundColor = 'white';
-            tday.innerHTML = d +'/'+ monthOfYear[m] + '/' + y;
-        }
 
-        // Show 
+            let style = tday.style;
+            style.color = 'crimson';
+            style.fontFamily = "cursive";
+            style.fontWeight = "bolder";
+
+            tday.innerHTML = d +'-'+ monthOfYear[m] + '-' + y;
+        }
+        // Show
         function show() {
-            alert("DEAR ONE");
-            let replyContainer = document.querySelector('.hidden');
-            let message = document.querySelector('#message');
-            let accept = document.querySelector('#accept');
-            let reject = document.querySelector('#reject');
-            let notDecided = document.queryselector('#notDecided');
-            let read = document.querySelector('#read');
-            
-            read.style.display = 'none';
-            replyContainer.style.display = 'block';
-            message.style.display = 'block';
-            // accept.style.display = 'block';
-            // reject.style.display = 'block';
-            // notDecided.style.display = 'block';
+            let btn = document.querySelector('.btn');
+            let message = document.getElementById('#message');
+            alert("HELLO! DEAR ONE");
+            btn.style.display = "block";
+            message.innerHTML = "thats True";
         }
 
         // Relay Message
